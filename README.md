@@ -18,6 +18,7 @@ vagrant up
 **box下载站**
 * <https://github.com/chef/bento>
 * <http://www.vagrantbox.es/>
+* ubuntu官网：<https://cloud-images.ubuntu.com/>
 
 **vagrant box常用命令**
 这些命令可以在任意位置执行
@@ -65,3 +66,9 @@ sendfile off;
 ```
 
 2.要删除虚拟机及整个环境目录，首先进行`destroy`，然后删除创建的目录，最后删除相应的box。注意备份代码。
+
+3.手动获取vagrant官方box的方法：
+<http://stackoverflow.com/questions/10155708/where-does-vagrant-download-its-box-files-to>
+其实官方的Ubuntu最新的ubuntu版本是从ubuntu官方获取的，Ubuntu官方提供的镜像有专门支持vagrant的版本，例如Ubuntu16.04的镜像：<https://cloud-images.ubuntu.com/xenial/current/>
+下载后是一个以box或者tar为后缀的文件，都可以直接通过`vagrant box add`来添加。后缀为box的文件实际上就是个压缩文件
+
