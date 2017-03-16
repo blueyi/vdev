@@ -28,7 +28,7 @@ vagrant up
 **vagrant常用命令**
 这些命令需要在指定的vagrant环境目录下执行，也就是在含有`Vagrantfile`的文件中执行
 * `vagrant init` 将当前目录初始化vagrant目录，虚拟机启动后该目录将默认与虚拟机系统中的`/vagrant`目录同步
-* `vagrant up` 启动当前目录对应的虚拟机
+* `vagrant up` 启动当前目录对应的虚拟机，如果没有指定box，则默认导入当前已经存在box
 * `vagrant ssh` 通过ssh连接到虚拟机，windows下需要使用第三方SSH工具，或者直接使用gitbash自带的
 * `vagrant halt` 关闭当前虚拟机
 * `vagrant suspend` 挂起当前虚拟机，相当于休眠

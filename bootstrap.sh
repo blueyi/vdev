@@ -11,32 +11,19 @@ apt-get update -y
 # apt-get upgrade -y
 
 # install build tools
-apt-get install -y make build-essential linux-headers-`uname -r` libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils
+apt-get install -y make cmake build-essential linux-headers-`uname -r` libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils
 
 # install useful tools
-apt-get install -y git vim exuberant-ctags wget curl
+apt-get install -y git wget curl
 
 # git configure
 
 
 # c/c++ env
-apt-get install gcc g++ cmake gdb
+# apt-get install -y gcc g++ gdb
 
 # python env
-apt-get install -y python
-# install pyenv
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-
-# .bashrc vimplugin config
-git clone https://github.com/blueyi/my-utils.git ~/.my-utils
-python ~/.my-utils/common/createSoftLink.py
-python ~/.my-utils/common/vimPlugin.py
-
-source ~/.bashrc
-# 
-# # install python
-pyenv install 2.7.13
-
+apt-get install -y python-dev python3 python3-dev
 
 # install apache2
 # apt-get install -y apache2
