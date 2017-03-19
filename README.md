@@ -49,7 +49,7 @@ vagrant up
 
 **一些默认配置**
 * 虚拟机IP为`192.168.33.10`
-* 虚拟机的用户名和密码为`vagrant`
+* 虚拟机的用户名和密码为`vagrant`，如果密码错错，可以使用`sudo passwd username`进行修改，可以不用密码直接执行sudo命令
 * 默认创建的虚拟机box命名为`ubuntu/xenial64`，可以在`Vagrantfile`修改为其他名字
 * 默认安装的环境请参见`bootstrap.sh`文件
 
