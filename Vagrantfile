@@ -12,8 +12,9 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/xenial64"
-  config.vm.box_url = "file://../ubuntu16.04.box"
+#  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "base"
+  config.vm.box_url = "file://../xenial-64.tar"
   config.vm.hostname = "dev"
 
   # Disable automatic box update checking. If you disable this, then

@@ -72,3 +72,18 @@ sendfile off;
 其实官方的Ubuntu最新的ubuntu版本是从ubuntu官方获取的，Ubuntu官方提供的镜像有专门支持vagrant的版本，例如Ubuntu16.04的镜像：<https://cloud-images.ubuntu.com/xenial/current/>
 下载后是一个以box或者tar为后缀的文件，都可以直接通过`vagrant box add`来添加。后缀为box的文件实际上就是个压缩文件
 
+
+4.虚拟机升级之后出现如下错误的解决方法：
+```
+default: The guest additions on this VM do not match the installed version of
+default: VirtualBox! In most cases this is fine, but in rare cases it can
+default: prevent things such as shared folders from working properly. If you see
+default: shared folder errors, please make sure the guest additions within the
+default: virtual machine match the version of VirtualBox you have installed on
+default: your host and reload your VM.
+```
+通过安装vagrant的vagrant-vbguest插件的自动升级guest addition
+```
+vagrant plugin install vagrant-vbguest
+```
+然后关闭虚拟机后再重新启动即可，有可能需要多次重新启动
