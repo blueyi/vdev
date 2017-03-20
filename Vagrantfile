@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.synced_folder '.', '/vagrant', nfs:true
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -52,7 +53,7 @@ Vagrant.configure("2") do |config|
   #
   #   # Customize the amount of memory on the VM:
     vb.memory = 512
-    vb.cpus = 2
+    vb.cpus = 1
   end
   #
   # View the documentation for the provider you are using for more
